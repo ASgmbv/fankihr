@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
-import Logo from "../Logo.svg";
+import Logo from "../logo.svg";
 import Bell from "../bell.svg";
-import Lion from "../Lion.svg";
-import ArrowDown from "../ArrowDown.svg";
+import Lion from "../lion.svg";
+import ArrowDown from "../arrowDown.svg";
 
 export default () => {
   return (
