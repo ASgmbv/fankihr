@@ -12,6 +12,7 @@ module.exports = {
               "@primary-color": "#FF4C00",
               "@menu-item-active-bg": "#FF4C00",
               "@menu-highlight-color": "#ffffff",
+              // "@text-color:": "#1D1C1D",
             },
           },
         },

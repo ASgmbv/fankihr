@@ -4,11 +4,16 @@
 
 .ant-menu {
   background-color: transparent;
+  color: "#555";
 }
 
 .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
   .svg-icon {
     fill: white;
+  }
+
+  .custom-svg-icon {
+    stroke: white;
   }
 
   &:hover {
@@ -48,4 +53,11 @@
 
 .ant-menu-item {
   padding-left: 24px !important;
+}
+
+.ant-menu-vertical .ant-menu-item::after,
+.ant-menu-vertical-left .ant-menu-item::after,
+.ant-menu-vertical-right .ant-menu-item::after,
+.ant-menu-inline .ant-menu-item::after {
+  border-right: none;
 }

@@ -2,8 +2,9 @@
 import { jsx } from "@emotion/core";
 import Logo from "../logo.svg";
 import Bell from "../bell.svg";
-import Lion from "../lion.svg";
-import ArrowDown from "../arrowDown.svg";
+// import Lion from "../lion.svg";
+import { Lion, ArrowDown } from "../icons/Main";
+// import ArrowDown from "../arrowDown.svg";
 
 export default () => {
   return (
@@ -13,7 +14,6 @@ export default () => {
         width: "100%",
         boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
         backgroundColor: "white",
-        marginBottom: "20px",
       }}
     >
       <div
@@ -81,6 +81,7 @@ export default () => {
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
+              alignItems: "flex-end",
             }}
           >
             <div
@@ -88,30 +89,17 @@ export default () => {
                 fontSize: "14px",
                 fontWeight: "bold",
                 color: "#1D1C1D",
+                lineHeight: "17px",
               }}
             >
               Александров Александр
             </div>
-            <div>Frontend разработчик</div>
+            <div css={{ color: "#959595", lineHeight: "17px", mt: "2px" }}>
+              Frontend разработчик
+            </div>
           </div>
-          <img
-            src={Lion}
-            alt="lion-icon"
-            height="36px"
-            width="36px"
-            css={{
-              marginLeft: "20px",
-            }}
-          />
-          <img
-            src={ArrowDown}
-            alt="lion-icon"
-            height="6px"
-            width="10px"
-            css={{
-              marginLeft: "20px",
-            }}
-          />
+          <Lion style={{ marginLeft: "20px" }} />
+          <ArrowDown style={{ marginLeft: "20px" }} />
         </div>
       </div>
     </header>

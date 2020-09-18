@@ -11,7 +11,6 @@ const Base = ({ children }) => {
         borderRadius: "6px",
         filter: "drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.1))",
         flex: 1,
-        marginBottom: "20px",
       }}
       actions={["База знаний →"]}
     >

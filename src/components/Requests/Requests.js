@@ -12,8 +12,6 @@ const Requests = ({ children }) => {
         borderRadius: "6px",
         filter: "drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.1))",
         flex: 1,
-        marginRight: "20px",
-        marginBottom: "20px",
         fontSize: "13px",
       }}
       actions={[<span>Запросы →</span>]}

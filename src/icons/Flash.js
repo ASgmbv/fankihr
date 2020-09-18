@@ -25,7 +25,7 @@ function SvgComponent(props) {
         />
       </mask>
       <g mask="url(#prefix__a)">
-        <path className="svg-icon" d="M0 0h24v24H0z" />
+        <path className="svg-icon" d="M0 0h24v24H0z" fill="#616061" />
       </g>
     </svg>
   );

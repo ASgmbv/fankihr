@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 import { Card, Tag, Avatar } from "antd";
+import "./styles.less";
 
 const NCard = ({ title, date, description, event }) => {
   return (

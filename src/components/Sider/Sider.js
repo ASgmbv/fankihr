@@ -1,6 +1,19 @@
 import React from "react";
 import { Layout, Menu } from "antd";
 import Flash from "../../icons/Flash";
+import {
+  Main,
+  Calendar,
+  Book,
+  OpenBook,
+  CheckMark,
+  MessageCircle,
+  TrendingUp,
+  Copy,
+  People,
+  Layers,
+  Settings,
+} from "../../icons/Main";
 import "./styles.less";
 
 const { Sider } = Layout;
@@ -10,11 +23,11 @@ const subMenuItems1 = [
   {
     title: "Главная",
     icon: (
-      <Flash
+      <Main
         style={{
           verticalAlign: "middle",
-          marginLeft: "-24px",
-          marginRight: "10px",
+          marginLeft: "-15px",
+          marginRight: "8px",
         }}
       />
     ),
@@ -25,8 +38,8 @@ const subMenuItems1 = [
       <Flash
         style={{
           verticalAlign: "middle",
-          marginLeft: "-24px",
-          marginRight: "10px",
+          marginLeft: "-15px",
+          marginRight: "8px",
         }}
       />
     ),
@@ -34,11 +47,11 @@ const subMenuItems1 = [
   {
     title: "Календарь",
     icon: (
-      <Flash
+      <Calendar
         style={{
           verticalAlign: "middle",
-          marginLeft: "-24px",
-          marginRight: "10px",
+          marginLeft: "-15px",
+          marginRight: "8px",
         }}
       />
     ),
@@ -46,11 +59,11 @@ const subMenuItems1 = [
   {
     title: "База Знаний",
     icon: (
-      <Flash
+      <Book
         style={{
           verticalAlign: "middle",
-          marginLeft: "-24px",
-          marginRight: "10px",
+          marginLeft: "-15px",
+          marginRight: "8px",
         }}
       />
     ),
@@ -58,11 +71,11 @@ const subMenuItems1 = [
   {
     title: "Новости",
     icon: (
-      <Flash
+      <OpenBook
         style={{
           verticalAlign: "middle",
-          marginLeft: "-24px",
-          marginRight: "10px",
+          marginLeft: "-15px",
+          marginRight: "8px",
         }}
       />
     ),
@@ -70,11 +83,11 @@ const subMenuItems1 = [
   {
     title: "Задачи",
     icon: (
-      <Flash
+      <CheckMark
         style={{
           verticalAlign: "middle",
-          marginLeft: "-24px",
-          marginRight: "10px",
+          marginLeft: "-15px",
+          marginRight: "8px",
         }}
       />
     ),
@@ -82,11 +95,11 @@ const subMenuItems1 = [
   {
     title: "Чаты",
     icon: (
-      <Flash
+      <MessageCircle
         style={{
           verticalAlign: "middle",
-          marginLeft: "-24px",
-          marginRight: "10px",
+          marginLeft: "-15px",
+          marginRight: "8px",
         }}
       />
     ),
@@ -97,11 +110,11 @@ const subMenuItems2 = [
   {
     title: "Статистика компании",
     icon: (
-      <Flash
+      <TrendingUp
         style={{
           verticalAlign: "middle",
-          marginLeft: "-24px",
-          marginRight: "10px",
+          marginLeft: "-15px",
+          marginRight: "8px",
         }}
       />
     ),
@@ -109,11 +122,11 @@ const subMenuItems2 = [
   {
     title: "Структура компании",
     icon: (
-      <Flash
+      <Copy
         style={{
           verticalAlign: "middle",
-          marginLeft: "-24px",
-          marginRight: "10px",
+          marginLeft: "-15px",
+          marginRight: "8px",
         }}
       />
     ),
@@ -121,11 +134,11 @@ const subMenuItems2 = [
   {
     title: "Сотрудники",
     icon: (
-      <Flash
+      <People
         style={{
           verticalAlign: "middle",
-          marginLeft: "-24px",
-          marginRight: "10px",
+          marginLeft: "-15px",
+          marginRight: "8px",
         }}
       />
     ),
@@ -133,11 +146,11 @@ const subMenuItems2 = [
   {
     title: "База знаний",
     icon: (
-      <Flash
+      <Book
         style={{
           verticalAlign: "middle",
-          marginLeft: "-24px",
-          marginRight: "10px",
+          marginLeft: "-15px",
+          marginRight: "8px",
         }}
       />
     ),
@@ -145,11 +158,11 @@ const subMenuItems2 = [
   {
     title: "Новости",
     icon: (
-      <Flash
+      <OpenBook
         style={{
           verticalAlign: "middle",
-          marginLeft: "-24px",
-          marginRight: "10px",
+          marginLeft: "-15px",
+          marginRight: "8px",
         }}
       />
     ),
@@ -157,11 +170,11 @@ const subMenuItems2 = [
   {
     title: "Настройки",
     icon: (
-      <Flash
+      <Settings
         style={{
           verticalAlign: "middle",
-          marginLeft: "-24px",
-          marginRight: "10px",
+          marginLeft: "-15px",
+          marginRight: "8px",
         }}
       />
     ),
@@ -169,11 +182,11 @@ const subMenuItems2 = [
   {
     title: "Служба поддержки",
     icon: (
-      <Flash
+      <Layers
         style={{
           verticalAlign: "middle",
-          marginLeft: "-24px",
-          marginRight: "10px",
+          marginLeft: "-15px",
+          marginRight: "8px",
         }}
       />
     ),
@@ -185,7 +198,7 @@ export default () => {
     <Sider theme="light">
       <Menu
         mode="inline"
-        defaultSelectedKeys={["1"]}
+        defaultSelectedKeys={["0"]}
         defaultOpenKeys={["sub1", "sub2"]}
         style={{
           height: "100%",

@@ -140,8 +140,54 @@ const data = [
   },
 ];
 
-const Tab = ({ title, stats, color }) => (
+const data1 = [
+  {
+    title: "Сапогова Лилия",
+    description: "Менеджер по продажам",
+    dates: "20 августа 2020 - 31 августа 2020",
+    color: "orange",
+  },
+  {
+    title: "Шепелева Галина",
+    description: "Менеджер по продажам",
+    dates: "20 августа 2020 - 10 сентября 2020",
+    color: "red",
+  },
+  {
+    title: "Никифорова Валентина",
+    description: "Менеджер по продажам",
+    dates: "10 августа 2020 - 21 августа 2020",
+    color: "blue",
+  },
+  {
+    title: "Федотов Алексей",
+    description: "Менеджер по продажам",
+    dates: "20 августа 2020 - 25 августа 2020",
+    color: "blue",
+  },
+  {
+    title: "Кузнецова Екатерина",
+    description: "Менеджер по продажам",
+    dates: "15 августа 2020 - 1 сентября 2020",
+    color: "orange",
+  },
+  {
+    title: "Яковлев Николай",
+    description: "Менеджер по продажам",
+    dates: "10 августа 2020 - 21 августа 2020",
+    color: "red",
+  },
+  {
+    title: "Гончаров Леонид",
+    description: "Менеджер по продажам",
+    dates: "10 августа 2020 - 21 августа 2020",
+    color: "blue",
+  },
+];
+
+const Tab = ({ title, stats, color, bg }) => (
   <div
+    className={`tab-${bg}`}
     css={{
       display: "flex",
       alignItems: "center",
@@ -180,7 +226,9 @@ const contentList = {
   tab1: (
     <Tabs defaultActiveKey="1">
       <TabPane
-        tab={<Tab title="Все" stats="23 сотрудника" color="#27AE60" />}
+        tab={
+          <Tab title="Все" stats="23 сотрудника" color="#27AE60" bg="green" />
+        }
         key="1"
         type="editable-card"
       >
@@ -205,48 +253,127 @@ const contentList = {
         </div>
       </TabPane>
       <TabPane
-        tab={<Tab title="В отпуске" stats="7 сотрудников" color="#2F80ED" />}
+        tab={
+          <Tab
+            title="В отпуске"
+            stats="7 сотрудников"
+            color="#2F80ED"
+            bg="blue"
+          />
+        }
         key="2"
       >
-        Content of Tab Pane 2
+        <div
+          css={{
+            display: "flex",
+            flexWrap: "wrap",
+            width: "100%",
+            border: "1px solid #DDDDDD",
+            borderRadius: "6px",
+          }}
+        >
+          {data1.map(({ title, description, dates, color }, index) => (
+            <SCard
+              title={title}
+              key={index}
+              description={description}
+              dates={dates}
+              color={color}
+            />
+          ))}
+        </div>
       </TabPane>
       <TabPane
-        tab={<Tab title="Отгул" stats="10 сотрудников" color="#F2994A" />}
+        tab={
+          <Tab
+            title="Отгул"
+            stats="10 сотрудников"
+            color="#F2994A"
+            bg="orange"
+          />
+        }
         key="3"
       >
-        Content of Tab Pane 3
+        <div
+          css={{
+            display: "flex",
+            flexWrap: "wrap",
+            width: "100%",
+            border: "1px solid #DDDDDD",
+            borderRadius: "6px",
+          }}
+        >
+          {data.map(({ title, description, dates, color }, index) => (
+            <SCard
+              title={title}
+              key={index}
+              description={description}
+              dates={dates}
+              color={color}
+            />
+          ))}
+        </div>
       </TabPane>
       <TabPane
-        tab={<Tab title="Больничный" stats="Нет" color="#FF0F00" />}
+        tab={<Tab title="Больничный" stats="Нет" color="#FF0F00" bg="red" />}
         key="4"
       >
-        Content of Tab Pane 3
+        <div
+          css={{
+            width: "100%",
+            display: "flex",
+            flexDirection: "column",
+            height: "100%",
+            justifyContent: "center",
+            alignItems: "center",
+            minHeight: "300px",
+          }}
+        >
+          <img src="/thumbsup.png" css={{ marginBottom: "20px" }} />
+          <span>Сотрудников на больничном нет</span>
+        </div>
       </TabPane>
     </Tabs>
   ),
   tab2: (
     <Tabs defaultActiveKey="1">
       <TabPane
-        tab={<Tab title="Все" stats="23 сотрудника" color="#27AE60" />}
+        tab={
+          <Tab title="Все" stats="23 сотрудника" color="#27AE60" bg="green" />
+        }
         key="1"
         type="editable-card"
       >
         Content of Tab Pane 1
       </TabPane>
       <TabPane
-        tab={<Tab title="В отпуске" stats="7 сотрудников" color="#2F80ED" />}
+        tab={
+          <Tab
+            title="В отпуске"
+            stats="7 сотрудников"
+            color="#2F80ED"
+            bg="blue"
+          />
+        }
         key="2"
       >
         Content of Tab Pane 2
       </TabPane>
       <TabPane
-        tab={<Tab title="Отгул" stats="10 сотрудников" color="#F2994A" />}
+        tab={
+          <Tab
+            title="Отгул"
+            stats="10 сотрудников"
+            color="#F2994A"
+            bg="orange"
+          />
+        }
         key="3"
       >
         Content of Tab Pane 3
       </TabPane>
       <TabPane
-        tab={<Tab title="Больничный" stats="Нет" color="#FF0F00" />}
+        tab={<Tab title="Больничный" stats="Нет" color="#FF0F00" bg="red" />}
         key="3"
       >
         Content of Tab Pane 3
@@ -256,26 +383,42 @@ const contentList = {
   tab3: (
     <Tabs defaultActiveKey="1">
       <TabPane
-        tab={<Tab title="Все" stats="23 сотрудника" color="#27AE60" />}
+        tab={
+          <Tab title="Все" stats="23 сотрудника" color="#27AE60" bg="green" />
+        }
         key="1"
         type="editable-card"
       >
         Content of Tab Pane 1
       </TabPane>
       <TabPane
-        tab={<Tab title="В отпуске" stats="7 сотрудников" color="#2F80ED" />}
+        tab={
+          <Tab
+            title="В отпуске"
+            stats="7 сотрудников"
+            color="#2F80ED"
+            bg="blue"
+          />
+        }
         key="2"
       >
         Content of Tab Pane 2
       </TabPane>
       <TabPane
-        tab={<Tab title="Отгул" stats="10 сотрудников" color="#F2994A" />}
+        tab={
+          <Tab
+            title="Отгул"
+            stats="10 сотрудников"
+            color="#F2994A"
+            bg="orange"
+          />
+        }
         key="3"
       >
         Content of Tab Pane 3
       </TabPane>
       <TabPane
-        tab={<Tab title="Больничный" stats="Нет" color="#FF0F00" />}
+        tab={<Tab title="Больничный" stats="Нет" color="#FF0F00" bg="red" />}
         key="3"
       >
         Content of Tab Pane 3
@@ -301,8 +444,9 @@ const Staff = () => {
       }}
       style={{
         borderRadius: "6px",
-        marginBottom: "20px",
         filter: "drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.1))",
+        border: "1px solid #DDDDDD",
+        gridColumn: "1 / 4",
       }}
     >
       {contentList[activeTab]}
